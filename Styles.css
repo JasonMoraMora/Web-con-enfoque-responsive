@@ -1,0 +1,95 @@
+/*Fuente importada desde google font de manera css*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+/*Link de la hoja de estilos de menu*/
+@import url(menu.css);
+@import url(banner.css);
+@import url(blog.css);
+@import url(info.css);
+
+/*Aspecto generales*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/*El borde sera dentro del mismo margen, todo se contiene dentro del modelo de caja*/
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 50px;
+    background: #333;
+    color: #fff;
+    
+    position: fixed;/*Posicion fija*/
+    top: 0;/*Arriba 0*/
+    left: 0;
+    z-index: 100;/*Siempre este por delante de todos lo elementos*/
+}
+
+.contenedor{
+    width: 98%;/*Para alinear y sea responsivo*/
+    margin: auto;
+}
+
+h1{
+    float: left;/*Para que flote el h1*/
+}
+
+header .contenedor{
+    display: table;/*El contenedor se encuentra solo y ya esta completamente responsivo*/
+}
+
+section{
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+#Bienvenidos{
+    text-align: center;
+}
+#Bienvenidos p{
+    margin: 5px;
+}
+
+/*footer*/
+.copy{
+    font-size: 20px;
+}
+
+footer .contenedor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 25px;
+}
+
+.sociales{
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+}
+
+.sociales a{
+    color: #333;
+    text-decoration: none;
+}
+
+@media(min-width:1024px){
+    .contenedor{
+        width: 1000px;
+    }
+}
+
+@media(min-width:768px){
+    .sociales{
+        width: auto;
+    }
+    
+    footer .contenedor{
+        justify-content: space-between;/*Manda a los extremos cuando la pagina se vuelve tipo tablet*/
+    }
+}
